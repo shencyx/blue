@@ -1,0 +1,105 @@
+<!--
+	战场配置
+	1:轩辕, 2:蚩尤
+-->
+<root>
+	<!-- 杂项配置 
+		RELIVE_TIME:复活时间, TIME_KEEP:保留时间 PUNISH_TIME:惩罚时间
+		START_SIZE:开始人数 WAIT_TIME:开始时间 BOMB_TIME:爆炸时间  END_DWELL_TIME:结束后停留时间
+		BE_KILL_TO_BOMB:被杀多少次后可以爆炸  MILITARY:军衔大于此值 BOMB_LIMIT:自爆次数
+	-->
+	<sundry RELIVE_TIME="5" TIME_KEEP="300" PUNISH_TIME="180" START_SIZE="40" WAIT_TIME="20" BOMB_TIME="1" END_DWELL_TIME="30" BE_KILL_TO_BOMB="1" MILITARY="50105" BOMB_LIMIT="3"/>
+	<!-- 入口点 -->
+	<entry mapId="450101">
+		<pos id="1" x="16" y="186"/>
+		<pos id="2" x="171" y="188"/>
+	</entry>
+	<!-- 等级段 -->
+	<level number="1">
+		<section id="1" min="40" max="100"/>
+	</level>
+	<!-- 据点相关 -->
+	<stronghold time="10">
+		<occ id="0" occ="1990"/>
+		<occ id="1" occ="1991"/>
+		<occ id="2" occ="1992"/>
+		<!-- 位置 -->
+		<pos id="1" x="64" y="261"/>
+		<pos id="2" x="123" y="262"/>
+		<pos id="3" x="91" y="179"/>
+		<pos id="4" x="116" y="103"/>
+		<pos id="5" x="57" y="101"/>
+		<!-- 加多少分 -->
+		<point id="1" point="15"/>
+		<point id="2" point="25"/>
+		<point id="3" point="40"/>
+		<point id="4" point="70"/>
+		<point id="5" point="100"/>
+	</stronghold>
+	<!-- 功勋值/资源分配置 -->
+	<!-- maxExploit：个人最高功勋值 maxKill:最多杀人次数 maxAssist:最多助攻次数 -->
+	<resource endPoint="10" maxExploit="1000" maxKill="60" maxAssist="60">
+		<!-- point:杀死得资源积分, exploit：得到功勋值-->
+		<kill point="4" exploit="10"/>
+		<!-- point:占领得资源积分, exploit：得到功勋值-->
+		<occupy point="10" exploit="10"/>
+		<!-- point:助攻得资源积分, exploit：得到功勋值-->
+		<assist point="1" exploit="2"/>
+	</resource>
+	<!-- 功勋值系数 -->
+	<exploit win="300" fail="100" tie="200">
+		<!-- 重大到小排，> value,系数为100分之几 -->
+		<ratio id="1" value="500" ratio="100"/>
+		<ratio id="2" value="400" ratio="95"/>
+		<ratio id="3" value="350" ratio="90"/>
+		<ratio id="4" value="300" ratio="85"/>
+		<ratio id="5" value="250" ratio="80"/>
+		<ratio id="6" value="200" ratio="75"/>
+		<ratio id="7" value="150" ratio="70"/>
+		<ratio id="8" value="100" ratio="65"/>
+		<ratio id="9" value="80" ratio="60"/>
+		<ratio id="10" value="50" ratio="50"/>
+		<ratio id="11" value="30" ratio="30"/>
+	</exploit>
+	<!-- 守护兽 -->
+	<monster>
+		<occ id="1" side="1" occ="1800" x="10" y="187" ai="45010101"/>
+		<occ id="2" side="2" occ="1801" x="165" y="189" ai="45010101"/>
+	</monster>
+	<!-- buff haloId:使用技能后的光环-->
+	<buff buffId="3050" maxLevel="3" haloId="3051"/>
+	<!-- 杀人广播 -->
+	<broadcast>
+		<!-- 杀人广播：text为广播string_cn.xml里的内容，　number为大到广播的杀人数 -->
+		<honor textId="6051" number="5"/>
+		<honor textId="6052" number="10"/>
+		<honor textId="6053" number="15"/>
+		<honor textId="6054" number="20"/>
+		<honor textId="6055" number="25"/>
+		<honor textId="6056" number="30"/>
+		<honor textId="6057" number="35"/>
+		<honor textId="6058" number="40"/>
+		<honor textId="6059" number="45"/>
+		<honor textId="6060" number="50"/>
+		<!-- 占领广播：text为广播string_cn.xml里的内容 -->
+		<occupy id="1" textId="6061"/>
+		<occupy id="2" textId="6062"/>
+		<occupy id="3" textId="6063"/>
+		<occupy id="4" textId="6064"/>
+	</broadcast>
+	<!-- 外观显示 -->
+	<dress>
+		<side id="1">
+			<occ id="11" dressId="611001" weaponId="511001"/>
+			<occ id="21" dressId="621001" weaponId="521001"/>
+			<occ id="31" dressId="631001" weaponId="531001"/>
+			<occ id="41" dressId="641001" weaponId="541001"/>
+		</side>
+		<side id="2">
+			<occ id="11" dressId="611002" weaponId="511002"/>
+			<occ id="21" dressId="621002" weaponId="521002"/>
+			<occ id="31" dressId="631002" weaponId="531002"/>
+			<occ id="41" dressId="641002" weaponId="541002"/>
+		</side>
+	</dress>
+</root>

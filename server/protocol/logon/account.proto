@@ -1,0 +1,28 @@
+
+package account;
+
+
+message Verify
+{
+	required string verify = 1;  	//登录验证字符串
+	required string account = 2;
+	required int32 serverId = 3; 	//账号所在服务器id
+	required uint32 timeStamp = 4; 	//时间戳 300秒过期
+}
+
+message Role  //角色信息
+{
+	required int64 roleId = 1;
+	required string name = 2;
+	required int32 occ = 3;
+	required int32 gender = 4;
+	required int32 camp = 5;
+	required int32 level = 6;
+}
+
+message Auth
+{
+	required int32 code = 1;
+	optional Role role = 2;
+}
+

@@ -1,0 +1,30 @@
+
+package scene;
+
+
+message LoginScene
+{
+	required int64 roleId = 1;
+	required string name = 2;
+	required int32 occ = 3;
+	required int32 gender = 4;
+	required int32 camp = 5;
+	required int32 level = 6;
+}
+
+message Role  //角色信息
+{
+	required int64 roleId = 1;
+	required string name = 2;
+	required int32 occ = 3;
+	required int32 gender = 4;
+	required int32 camp = 5;
+	required int32 level = 6;
+}
+
+message Auth
+{
+	required int32 code = 1;
+	optional Role role = 2;
+}
+

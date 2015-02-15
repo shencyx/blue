@@ -1,0 +1,20 @@
+
+
+
+class Account_rpc{
+	void	 	pluse()
+    account.Auth 	verify(account.Verify)  //验证账号
+    account.Role 	getRole()            	//获取角色
+	account.Role 	createRole(account.Role)//创建角色
+	void		login()   //登陆游戏
+
+}
+
+class AccountTest_rpc{
+	void	 	godd()
+    account.Auth 	hight(account.Verify)  //验证账号
+    account.Role 	getRole()            	//获取角色
+	account.Role 	createRole(account.Role)//创建角色
+	void		login()   //登陆游戏
+
+}

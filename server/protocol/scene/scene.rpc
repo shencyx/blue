@@ -1,0 +1,7 @@
+
+//场景操作相关
+class Scene_rpc{
+	scene.LoginScene loginScene()   //登陆场景
+	pb.IntArray afterLogin()	//loginScene后的协议，取各中登陆信息
+
+}

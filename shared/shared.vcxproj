@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8BE83630-4ABA-4168-BEDD-CBF68E3DDB61}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>shared</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\lib\openssl-1.0.0d\include;D:\lib\lua\include</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>D:\lib\openssl-1.0.0d\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\lib\openssl-1.0.0d\include;D:\lib\lua\include</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>D:\lib\openssl-1.0.0d\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\lib\openssl-1.0.0d\include;D:\lib\lua\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>D:\lib\openssl-1.0.0d\lib;</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="auth\BigNumber.cpp" />
+    <ClCompile Include="auth\crc32.cpp" />
+    <ClCompile Include="Server.cpp" />
+    <ClCompile Include="Service.cpp" />
+    <ClCompile Include="tools\MapFile.cpp" />
+    <ClCompile Include="tools\MapFileEntry.cpp" />
+    <ClCompile Include="tools\printStackTrace.cpp" />
+    <ClCompile Include="tools\StackTrace.cpp" />
+    <ClCompile Include="tools\TextFile.cpp" />
+    <ClCompile Include="util\MersenneTwister.cpp" />
+    <ClCompile Include="auth\Sha1.cpp" />
+    <ClCompile Include="auth\WowCrypt.cpp" />
+    <ClCompile Include="config\Config.cpp" />
+    <ClCompile Include="database\CreateInterface.cpp" />
+    <ClCompile Include="database\Database.cpp" />
+    <ClCompile Include="database\MySQLDatabase.cpp" />
+    <ClCompile Include="log\Log.cpp" />
+    <ClCompile Include="network\CircularBuffer.cpp" />
+    <ClCompile Include="network\Socket.cpp" />
+    <ClCompile Include="network\SocketFreeBSD.cpp" />
+    <ClCompile Include="network\SocketLinux.cpp" />
+    <ClCompile Include="network\SocketMgrFreeBSD.cpp" />
+    <ClCompile Include="network\SocketMgrLinux.cpp" />
+    <ClCompile Include="network\SocketMgrWin32.cpp" />
+    <ClCompile Include="network\SocketOpsFreeBSD.cpp" />
+    <ClCompile Include="network\SocketOpsLinux.cpp" />
+    <ClCompile Include="network\SocketOpsWin32.cpp" />
+    <ClCompile Include="network\SocketWin32.cpp" />
+    <ClCompile Include="threading\AtomicBoolean.cpp" />
+    <ClCompile Include="threading\AtomicCounter.cpp" />
+    <ClCompile Include="threading\AtomicFloat.cpp" />
+    <ClCompile Include="threading\AtomicULong.cpp" />
+    <ClCompile Include="threading\ConditionVariable.cpp" />
+    <ClCompile Include="threading\CThreads.cpp" />
+    <ClCompile Include="threading\Mutex.cpp" />
+    <ClCompile Include="threading\ThreadPool.cpp" />
+    <ClCompile Include="util\SysInfo.cpp" />
+    <ClCompile Include="util\Timer.cpp" />
+    <ClCompile Include="util\Util.cpp" />
+    <ClCompile Include="WorkThread.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="auth\BigNumber.h" />
+    <ClInclude Include="auth\crc32.h" />
+    <ClInclude Include="CmdMgr.h" />
+    <ClInclude Include="lua\lua_class.h" />
+    <ClInclude Include="Server.h" />
+    <ClInclude Include="Service.h" />
+    <ClInclude Include="Singleton2.h" />
+    <ClInclude Include="threading\RWQueue.h" />
+    <ClInclude Include="tools\MapFile.h" />
+    <ClInclude Include="tools\MapFileEntry.h" />
+    <ClInclude Include="tools\printStackTrace.h" />
+    <ClInclude Include="tools\StackTrace.h" />
+    <ClInclude Include="tools\TextFile.h" />
+    <ClInclude Include="util\Array.h" />
+    <ClInclude Include="util\MersenneTwister.h" />
+    <ClInclude Include="auth\RC4Engine.h" />
+    <ClInclude Include="auth\Sha1.h" />
+    <ClInclude Include="auth\WowCrypt.h" />
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="config\Config.h" />
+    <ClInclude Include="config\ConfigEnv.h" />
+    <ClInclude Include="database\Database.h" />
+    <ClInclude Include="database\DatabaseEnv.h" />
+    <ClInclude Include="database\DataStore.h" />
+    <ClInclude Include="database\Field.h" />
+    <ClInclude Include="database\MySQLDatabase.h" />
+    <ClInclude Include="Error.h" />
+    <ClInclude Include="GlobalDefine.h" />
+    <ClInclude Include="log\Log.h" />
+    <ClInclude Include="network\CircularBuffer.h" />
+    <ClInclude Include="network\ListenSocketFreeBSD.h" />
+    <ClInclude Include="network\ListenSocketLinux.h" />
+    <ClInclude Include="network\ListenSocketWin32.h" />
+    <ClInclude Include="network\Network.h" />
+    <ClInclude Include="network\Socket.h" />
+    <ClInclude Include="network\SocketDefines.h" />
+    <ClInclude Include="network\SocketMgrFreeBSD.h" />
+    <ClInclude Include="network\SocketMgrLinux.h" />
+    <ClInclude Include="network\SocketMgrWin32.h" />
+    <ClInclude Include="network\SocketOps.h" />
+    <ClInclude Include="Singleton.h" />
+    <ClInclude Include="threading\AtomicBoolean.h" />
+    <ClInclude Include="threading\AtomicCounter.h" />
+    <ClInclude Include="threading\AtomicFloat.h" />
+    <ClInclude Include="threading\AtomicULong.h" />
+    <ClInclude Include="threading\ConditionVariable.h" />
+    <ClInclude Include="threading\CThreads.h" />
+    <ClInclude Include="threading\Guard.h" />
+    <ClInclude Include="threading\LockedQueue.h" />
+    <ClInclude Include="threading\Mutex.h" />
+    <ClInclude Include="threading\Queue.h" />
+    <ClInclude Include="threading\RWLock.h" />
+    <ClInclude Include="threading\Threading.h" />
+    <ClInclude Include="threading\ThreadPool.h" />
+    <ClInclude Include="threading\ThreadStarter.h" />
+    <ClInclude Include="util\ByteBuffer.h" />
+    <ClInclude Include="util\CallBack.h" />
+    <ClInclude Include="util\CRefcounter.h" />
+    <ClInclude Include="util\FastQueue.h" />
+    <ClInclude Include="util\NonCopyAble.h" />
+    <ClInclude Include="util\SharedPtr.h" />
+    <ClInclude Include="util\Storage.h" />
+    <ClInclude Include="util\SysInfo.hpp" />
+    <ClInclude Include="util\Timer.h" />
+    <ClInclude Include="util\Tokenizer.h" />
+    <ClInclude Include="util\Util.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

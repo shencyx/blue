@@ -1,0 +1,6 @@
+
+//场景操作相关
+class World_rpc{
+	pb.IntArray afterLogin()	//loginScene后的协议，取各中登陆信息
+
+}
