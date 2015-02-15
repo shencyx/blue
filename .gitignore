@@ -27,6 +27,9 @@
 *.out
 *.app
 
+*.sdf
+*.log
+*.rar
 Debug/
 Release/
 ipch/
